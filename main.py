@@ -8,7 +8,7 @@ sshset_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect('adresse_ip_machine_distante', username='nom_utilisateur', password='mot_de_passe')
 
 # Exécuter la commande d'arrêt de la machine distante
-stdin, stdout, stderr = ssh.exec_command('sudo poweroff')
+stdin, stdout, stderr = ssh.exec_command('shutdown -s')
 
 # Attendre que la machine soit éteinte
 # Vous pouvez modifier le temps d'attente en fonction de votre système et de la vitesse de la connexion
